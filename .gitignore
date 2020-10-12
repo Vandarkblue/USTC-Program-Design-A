@@ -1,2 +1,8 @@
+/*
+!.gitignore
+!/homework/
+!/practice/
+!LICENSE
+!README.md
 *.o
 *.exe
