@@ -49,3 +49,4 @@ Not only the softwares in our computers required to complie and run our C code, 
 如果喜欢的话，就给这个仓库点个 Star 吧。当然也可以给我打钱，微信扫码即可。
 
 ![给我打钱](./WeChatPay.png)
+![给我打钱-备用图](https://ftp.bmp.ovh/imgs/2020/10/f6ef9037f4c3d645.png)
