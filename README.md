@@ -36,17 +36,21 @@ Not only the softwares in our computers required to complie and run our C code, 
 
 - [Stack Overflow](https://stackoverflow.com/) : A community filled with experienced programmers. The questions got solved there might be your question.
 
-- 《牛津高阶英汉双解词典》，商务印书馆。由于国内的特定环境，有时并不能用汉语获得准确可靠的信息。
+## Acknowledgement | 致谢
 
-- Shadowsocks R : As above, sometimes you need to look at the outer world. But let's not talk about this more.
+### Patrons | 赞助者们
 
-## Developing Environment Setup | 设置开发环境
+Who inspire me in a realistic way.
 
-*To be complete*
+- *Goisury*
+- liu shao
+- *滫瑹莜蔦*
+- *迷人的牛老师*
+- [HaomingXU](https://github.com/HaomingXU)
+- [Sakura-522](https://github.com/Sakura-522)
 
-## Support Us | 帮助我们
+## Support us | 支持我们
 
-如果喜欢的话，就给这个仓库点个 Star 吧。当然也可以给我打钱，微信扫码即可。
+You may star this repository if it helped you.
 
-![给我打钱](./WeChatPay.png)
-![给我打钱-备用图](https://ftp.bmp.ovh/imgs/2020/10/f6ef9037f4c3d645.png)
+如果 USTC Program Design A 对你有所帮助，请给这个仓库点个 Star 吧。
