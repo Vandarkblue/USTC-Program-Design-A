@@ -8,24 +8,32 @@
 
 #include <stdio.h>
 
+// Define the number of chars
+#define LENGTH 2
+
 int main(void)
 {
-	char c1, c2;
+	int c[LENGTH]; //Predefine
 
-	printf("c1 = ");
-	c1 = getchar();
-	getchar();
-	printf("c2 = ");
-	c2 = getchar();
-
-	putchar(c1);
-	putchar(c2);
+	// Input
+	for (size_t i = 0; i < LENGTH; i++)
+	{
+		printf("c%d = ", i+1);
+		c[i] = getchar();
+		getchar();
+	}
+	
+	// putchar()
+	for (size_t i = 0; i < LENGTH; i++) putchar(c[i]);
 	putchar('\n');
 
-	printf("%c%c\n",c1,c2);
+	// printf()
+	for (size_t i = 0; i < LENGTH; i++) printf("%c",c[i]);
+	printf("\n");
 
 	// Print ASCII
-	printf("%d,%d\n",c1,c2);
+	for (size_t i = 0; i < LENGTH; i++) printf("%d ",c[i]);
+	printf("\n");
 
-	return 0;
+	return 0; // Good habit
 }

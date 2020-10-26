@@ -1,36 +1,45 @@
-// Tan Haoqiang page 107 task 4
-
-// PLease don't use so many if-elses like this in your code.
+// Tan Haoqiang page 107 task 4 modified
 
 #include <stdio.h>
 
+// Generally NUM <= 26, otherwise it requires rewriting
+#define NUM 3
+
 int main(void)
 {
-	int a, b, c;
+	// Predefine
+	int s[NUM]; // Value
+	char t[NUM]; // Character
 
-	printf("Input a, b and c.\n");
-	scanf("%d %d %d", &a, &b, &c);
+	for (int i = 0; i < NUM; i++) t[i] = i + 'a'; // If NUM > 26, rewrite this
 
-	if (a > b && b > c)
+	// Input
+	for (int i = 0; i < NUM; i++)
 	{
-		printf("a=%d, b=%d, c=%d", a, b, c);
-
-	} else if (a > c && c > b) {
-		printf("a=%d, c=%d, b=%d", a, c, b);
-
-	} else if (b > c && c > a) {
-		printf("b=%d, c=%d, a=%d", b, c, a);
-
-	} else if (b > a && a > c) {
-		printf("b=%d, a=%d, c=%d", b, a, c);
-
-	} else if (c > a && a> b) {
-		printf("c=%d, a=%d, b=%d", c, a, b);
-
-	} else {
-		printf("c=%d, b=%d, a=%d", c, b, a);
-
+		printf("%c = ", t[i]);
+		scanf("%d", &s[i]);
 	}
 
-	return 0;
+	// Selection Sorting O(n^2)
+	for (int i = 0; i < NUM - 1; i++)
+	{
+		int min = i;
+		for (int j = i + 1; j < NUM; j++) if (s[min]<s[j]) min = j;
+		if (min != i)
+		{
+			s[i] ^= s[min];
+			s[min] ^= s[i];
+			s[i] ^= s[min];
+
+			t[i] ^= t[min];
+			t[min] ^= t[i];
+			t[i] ^= t[min];
+		}
+	}
+
+	// Output
+	for (int i = 0; i < NUM; i++) printf("%c = %d, ", t[i], s[i]);
+	printf("\n");
+
+	return 0; // Good habit
 }

@@ -14,6 +14,8 @@ All of the codes and other associated documentation files in this repository are
 
 ## Introduction | 导言
 
+### Motivation | 动力
+
 In this repository we aim to offer some certain help for program design in the C language. It also works as a reminder of the proper method for code and documentation. We would try our best to push the required materials one day before the deadline and clarify the documentation.
 
 Any questions would be welcome since you have read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html).
@@ -21,6 +23,12 @@ Any questions would be welcome since you have read [*How To Ask Questions The Sm
 本仓库旨在为中国科学技术大学以及其它院校的同学提供计算机程序设计方面的一定参考，同时帮助仓库维护者养成良好的代码和文档写作习惯。仓库尽可能跟进教学进度更新，并做好相应的说明文档。
 
 仓库创建者接受关于本仓库的提问，但在向作者提问之前，请仔细阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)。
+
+### Arrangement | 仓库结构
+
+In the `./homework/` and `./practice/` directories lay the code sorted accroding to the date when the contents are assigned.
+
+`./homework/` 目录是历次布置的作业，`./practice/` 目录则是每周一上机内容；下级目录按作业布置日期或上机日期命名。
 
 ## Recommendations | 推荐
 

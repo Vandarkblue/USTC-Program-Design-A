@@ -4,38 +4,24 @@
 
 int main(void)
 {
-	int c1, c2, c3, c4, c5;
+	// Predefine
+	int encode();
+	int c[] = {'C','h','i','n','a'};
 
-	c1='C'; c2='h'; c3='i'; c4='n'; c5='a';
-	
-	c1 = encode(c1);
-	c2 = encode(c2);
-	c3 = encode(c3);
-	c4 = encode(c4);
-	c5 = encode(c5);
-
-	putchar(c1);
-	putchar(c2);
-	putchar(c3);
-	putchar(c4);
-	putchar(c5);
+	// Calculate and output by putchar()
+	for (size_t i = 0; i < sizeof(c)/4; i++) putchar(encode(c[i]));
 	putchar('\n');
 
-	printf("%c%c%c%c%c\n",c1,c2,c3,c4,c5);
-	
-	return 0;
+	// Calculate and output by printf()
+	for (size_t i = 0; i < sizeof(c)/4; i++) printf("%c",encode(c[i]));
+	printf("\n");
+
+	return 0; // Good habit
 }
 
-int encode(int cx)
+int encode(int cx) // Shift each letter 4 positions down
 {
-	if (cx>=65 && cx<=86 || cx>=97 && cx<=118)
-	{
-		return cx+4;
-	} else if (cx>=87 && cx<=90 || cx>= 119 && cx<=122)
-	{
-		return cx-22;
-	} else
-	{
-		return cx;
-	}
+	if (cx>=65 && cx<=86 || cx>=97 && cx<=118) return cx+4; // from a to x
+	else if (cx>=87 && cx<=90 || cx>= 119 && cx<=122) return cx-22; // from w to z
+	else return cx; // not a letter
 }
