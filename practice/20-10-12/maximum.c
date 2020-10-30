@@ -1,3 +1,5 @@
+/* maximum.c -- Task 2 */
+
 #include <stdio.h>
 
 int main(void)

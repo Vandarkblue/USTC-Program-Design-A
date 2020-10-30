@@ -1,5 +1,7 @@
-#include<stdio.h>
-#include<math.h>
+/* trianglePlus.c -- Task 2 */
+
+#include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
@@ -12,8 +14,8 @@ int main(void)
 	printf("input c:");
 	scanf("%lf", &c);
 
-	if(a+b>c&&a+c>b&&c+b>a) {
-		
+	if(a+b>c&&a+c>b&&c+b>a) // As `../20-10-12/triangle.c`
+	{	
 		s = (a+b+c)/2.0;
 		area = sqrt(s*(s-a)*(s-b)*(s-c));
 		e = a*a + b*b - c*c;

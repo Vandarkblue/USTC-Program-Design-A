@@ -1,23 +1,23 @@
-// Tan Haoqiang page 108 task 6
+/* piecewise.c -- Tan Haoqiang page 108 task 6 */
 
 #include <stdio.h>
 
 int main(void)
 {
-	// Predefine
+	/* Predefine */
 	double x, y;
 
-	// Input
+	/* Input */
 	printf("x = ");
 	scanf("%lf",&x);
 
-	// Calculating
+	/* Calculating */
 	if ( x < 1.0 ) y = x;
 	else if ( x < 10.0 ) y = 2.0*x - 1.0;
 	else y = 3.0*x - 11.0;
 
-	// Output
+	/* Output */
 	printf("y = %lf",y);
 
-	return 0; // Good habit
+	return 0;
 }

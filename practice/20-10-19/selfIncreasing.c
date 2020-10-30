@@ -1,4 +1,7 @@
+/* selfIncreasing.c -- Task 2 */
+
 #include <stdio.h>
+
 int main(void)
 {
 	int i, j, m, n;

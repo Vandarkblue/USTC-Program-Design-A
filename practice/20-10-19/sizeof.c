@@ -1,3 +1,5 @@
+/* sizeof.c -- Task 1 */
+
 #include <stdio.h>
 
 int main(void)

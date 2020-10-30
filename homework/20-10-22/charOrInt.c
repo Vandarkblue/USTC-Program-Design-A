@@ -1,4 +1,4 @@
-// Tan Haoqiang page 82 task 8
+/* charOrInt -- Tan Haoqiang page 82 task 8 */
 
 /* Answers
 	1. Both are okay.
@@ -8,14 +8,14 @@
 
 #include <stdio.h>
 
-// Define the number of chars
+/* Define the number of chars */
 #define LENGTH 2
 
 int main(void)
 {
-	int c[LENGTH]; //Predefine
+	int c[LENGTH]; // Predefine
 
-	// Input
+	/* Input */
 	for (size_t i = 0; i < LENGTH; i++)
 	{
 		printf("c%d = ", i+1);
@@ -23,17 +23,17 @@ int main(void)
 		getchar();
 	}
 	
-	// putchar()
+	/* putchar() */
 	for (size_t i = 0; i < LENGTH; i++) putchar(c[i]);
 	putchar('\n');
 
-	// printf()
+	/* printf() */
 	for (size_t i = 0; i < LENGTH; i++) printf("%c",c[i]);
 	printf("\n");
 
-	// Print ASCII
+	/* Print ASCII */
 	for (size_t i = 0; i < LENGTH; i++) printf("%d ",c[i]);
 	printf("\n");
 
-	return 0; // Good habit
+	return 0;
 }

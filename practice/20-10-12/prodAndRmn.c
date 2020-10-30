@@ -1,3 +1,5 @@
+/* prodAndRmn.c -- Task 4 */
+
 #include <stdio.h>
 
 int main(void)

@@ -1,20 +1,23 @@
-#include<stdio.h>
+/* grade.c -- Task 4 */
+
+#include <stdio.h>
 
 int main(void)
 {
 	int score, i, b;
 	char grade;
 
-	while(1) {
-
+	while( 1 )
+	{
 		b = scanf("%d",&score);
 		getchar();
 
-		if(score>=0&&score<=100&&b) {
-
+		if(score>=0&&score<=100&&b)
+		{
 			i = score / 10;
 
-			switch(i) {
+			switch(i)
+			{
 				case 0:
 				case 1:
 				case 2:
