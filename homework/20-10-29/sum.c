@@ -23,7 +23,7 @@ int main(void)
 
 	for (size_t i = 1; i < n; i++)
 	{
-		c[i] = 10*c[i-1] + a;
+		c[i] = 10 * c[i-1] + a;
 		s += c[i];
 	}
 

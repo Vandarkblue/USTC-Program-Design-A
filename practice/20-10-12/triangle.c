@@ -14,15 +14,19 @@ int main(void)
 	printf("input c:");
 	scanf("%lf", &c);
 
-	if(a+b>c && a+c>b && c+b>a) {
-
-		s = (a+b+c)/2.0;
+	if(a+b>c && a+c>b && c+b>a)
+	{
+		s = (a+b+c) / 2.0;
 		area = sqrt(s*(s-a)*(s-b)*(s-c));
 
 		printf("a=%6.2f, b=%6.2f, c=%6.2f\n", a, b, c);
 		printf("s=%-8.2f, area=%-8.2f\n", s, area);
 
-	} else printf("Cannot form a triangle.");
+	}
+	else
+	{
+		printf("Cannot form a triangle.");
+	}
 
 	return 0;
 }

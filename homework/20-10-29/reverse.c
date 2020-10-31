@@ -13,10 +13,13 @@ int main(void)
 
 	size_t n = 0, i = 0;
 
-	printf("Input a: "); // Input
+	printf("a = ");
 	scanf("%lld", &a);
 
-	for (size_t t = a; t >= 1; t /= 10) n++;
+	for (size_t t = a; t >= 1; t /= 10)
+	{
+		n++;
+	}
 	printf("The length is %lld.\n", n);
 
 	size_t c[n-1]; // Variable-length array
@@ -27,10 +30,18 @@ int main(void)
 		i++;
 	}
 
-	for (size_t i = 0; i < n; i++) printf("%d, ", c[n-i-1]); // Ascending
+	/* Ascending */
+	for (size_t i = 0; i < n; i++)
+	{
+		printf("%d, ", c[n-i-1]);
+	}
 	putchar('\n');
 
-	for (size_t i = 0; i < n; i++) printf("%d, ", c[i]); // Descending
+	/* Descending */
+	for (size_t i = 0; i < n; i++)
+	{
+		printf("%d, ", c[i]);
+	}
 	putchar('\n');
 
 	return 0;

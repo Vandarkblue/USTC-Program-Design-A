@@ -24,15 +24,24 @@ int main(void)
 	}
 	
 	/* putchar() */
-	for (size_t i = 0; i < LENGTH; i++) putchar(c[i]);
+	for (size_t i = 0; i < LENGTH; i++)
+	{
+		putchar(c[i]);
+	}
 	putchar('\n');
 
 	/* printf() */
-	for (size_t i = 0; i < LENGTH; i++) printf("%c",c[i]);
+	for (size_t i = 0; i < LENGTH; i++)
+	{
+		printf("%c",c[i]);
+	}
 	printf("\n");
 
 	/* Print ASCII */
-	for (size_t i = 0; i < LENGTH; i++) printf("%d ",c[i]);
+	for (size_t i = 0; i < LENGTH; i++)
+	{
+		printf("%d ",c[i]);
+	}
 	printf("\n");
 
 	return 0;
