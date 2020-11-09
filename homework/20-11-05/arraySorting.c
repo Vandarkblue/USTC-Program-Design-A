@@ -45,7 +45,8 @@ int main(void)
 	printf("The new integer is: ");
 	scanf("%d", &a);
 
-	for (size_t i = 0; i < n; i++) /* Find the location where */
+	/* Find the location where the integer should lie */
+	for (size_t i = 0; i < n; i++) 
 	{
 		if (p[i] >= a)
 		{
