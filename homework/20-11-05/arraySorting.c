@@ -1,6 +1,6 @@
 /* arraySorting.c -- Tan Haoqiang pgae 165 task 4 modified */
-/* Sort a int array then insert another integer */
-/* Kind of RAM-wasting, for 2 nearly equivalent arraies here */
+/* Sort a int array then insert another integer. */
+/* Kind of RAM-wasting, for 2 nearly equivalent arraies here. */
 
 #include <stdio.h>
 
@@ -53,6 +53,7 @@ int main(void)
 			k = i;
 			break;
 		}
+
 	}
 	for (size_t i = 0; i < k; i++)
 	{

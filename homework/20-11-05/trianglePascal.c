@@ -1,5 +1,5 @@
 /* trianglePascal.c -- Tan Haoqiang pgae 165 task 6 */
-/* Ugly code, however it works */
+/* Ugly code, however it works. */
 
 #include <stdio.h>
 
@@ -19,6 +19,7 @@ int main(void)
 		}
 		a[i*(i+3)/2] = 1;
 		printf("%6d\n", 1);
+
 	}
 
 	return 0;

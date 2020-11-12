@@ -1,3 +1,5 @@
+/* arraySortDual.c -- Task 2 */
+
 #include <stdio.h>
 
 int main(void)
@@ -10,7 +12,7 @@ int main(void)
 		printf("The Integer %d of array A is: ", i+1);
 		scanf("%d", &a[i]);
 	}
-	
+
 	for (size_t i = 0; i < 5; i++)
 	{
 		printf("The Integer %d of array B is: ", i+1);
@@ -37,7 +39,7 @@ int main(void)
 		printf("%d ", a[i]);
 	}
 	putchar('\n');
-	
+
 	for (size_t i = 0; i < 5; i++)
 	{
 		printf("%d ", b[i]);

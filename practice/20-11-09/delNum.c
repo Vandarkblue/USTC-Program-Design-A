@@ -1,3 +1,5 @@
+/* delNum.c -- Task 1 */
+
 #include <stdio.h>
 
 int main(void)
@@ -18,11 +20,12 @@ int main(void)
 	{
 		printf("%d ", a[i]);
 	}
-	
+
 	for (size_t i = del - 1; i < 9; i++)
 	{
 		a[i] = a[i+1];
 		printf("%d ", a[i]);
 	}
+
 	return 0;
 }

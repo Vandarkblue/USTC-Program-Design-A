@@ -2,33 +2,35 @@
 
 #include <stdio.h>
 
-#define LENGTH 32767
+#define LENGTH 0xfffffff
+
+char *strcat(char *, char *);
 
 int main(void)
 {
 	char a[LENGTH], b[LENGTH];
-	size_t i, j, k;
 
 	printf("Input String A: ");
 	gets(a);
 	printf("Input String B: ");
 	gets(b);
 
-	i = 0;
-
-	do
-	{
-		++ i;
-	} while (a[i] != '\0');
-
-	for (j = 0; b[j] != '\0'; ++j)
-	{
-		a[i+j] = b[j];
-	}
-	for (k = 0; k < i+j; k++)
-	{
-		putchar(a[k]);
-	}
+	puts(strcat(a, b));
 
 	return 0;
+}
+
+char *strcat(char dest[], char addn[])
+{
+	size_t i = 1, j = 0, k = 0;
+	while (dest[i] != '\0')
+	{
+		++i;
+	}
+	while (addn[j] != '\0')
+	{
+		dest[i+j] = addn[j];
+		++j;
+	}
+	return dest;
 }

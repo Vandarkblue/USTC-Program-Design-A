@@ -1,3 +1,6 @@
+/* strcmp.c -- Task 3 */
+/* If a positive integer is printed, then a > b, vise versa. `0` Means a == b. */
+
 #include <stdio.h>
 
 int main(void)

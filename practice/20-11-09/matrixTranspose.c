@@ -1,8 +1,11 @@
+/* matrixTranspose.c -- Task 4 */
+
 #include <stdio.h>
 
 int main(void)
 {
 	int a[3][3], b[3][2], c[3][2];
+	int temp;
 
 	for (size_t i = 0; i < 3; i++)
 	{
@@ -21,6 +24,7 @@ int main(void)
 		}
 	}	
 	
+	/* Fake transposing */
 	printf("---------\nA transposed:\n");
 	for (size_t i = 0; i < 3; i++)
 	{
@@ -30,12 +34,13 @@ int main(void)
 		}
 		putchar('\n');
 	}
+
 	printf("---------\nC:\n");
 	for (size_t i = 0; i < 3; i++)
 	{
 		for (size_t j = 0; j < 2; j++)
 		{
-			int temp = 0;
+			temp = 0;
 			for (size_t k = 0; k < 3; k++)
 			{
 				temp += a[i][k] * b[k][j];
@@ -45,5 +50,6 @@ int main(void)
 		}
 		putchar('\n');
 	}
+
 	return 0;
 }
