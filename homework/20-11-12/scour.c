@@ -1,4 +1,4 @@
-/* isPrime.c -- Tan Haoqiang Page 166 Task 9 modified*/
+/* isPrime.c -- Tan Haoqiang Page 166 Task 9 modified */
 /* ------------------------------------ */
 /*   Licensed under the MIT License     */
 /*  Copyright (c) 2020 Dec.Randomizer   */
@@ -9,6 +9,7 @@
 
 #define N 15
 
+/* Search for integer obj in array_a, and s is the length of a. */
 int searchBinary(int a[], int s, int obj);
 int searchSequence(int a[], int s, int obj);
 
@@ -31,7 +32,7 @@ int main(void)
 	return 0;
 }
 
-int searchBinary(int a[], int s, int obj)
+int searchBinary(int a[], int s, int obj) /* Faster */
 {
 	int boundUpper, boundLower, median;
 
