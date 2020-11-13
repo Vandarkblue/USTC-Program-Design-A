@@ -7,54 +7,61 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <complex.h>
 
-int delta_0(void);
-int delta_1(int, int, int);
-_Complex delta_2(int, int, int);
+void printRootEquationQuadRealSingle(double);
+void printRootEquationQuadRealDualReal(double, double);
+void printRootEquationQuadRealDualComplex(double, double);
 
 int main(void)
 {
-	int a, b, c;
-	_Complex d;
+	double a, b, c, d, f;
 
 	printf("Input a:");
-	scanf("%d", &a);
+	scanf("%lf", &a);
 	printf("Input b:");
-	scanf("%d", &b);
+	scanf("%lf", &b);
 	printf("Input c:");
-	scanf("%d", &c);
+	scanf("%lf", &c);
 
-	d = b*b-4*a*c;
+	d = (b*b - 4*a*c) / (2*a);
+	f = -b / (2*a);
 
-	if (creal(d) > 0)
+	if (a == 0)
 	{
-		d = delta_0();
+		printRootEquationQuadRealSingle(-c/b);
 	}
-	else if (creal(d) == 0)
+	else if (d == 0)
 	{
-		d = delta_1(a, b, c);
+		printRootEquationQuadRealSingle(f);
+	}
+	else if (d > 0)
+	{
+		printRootEquationQuadRealDualReal(d, f);
 	}
 	else
 	{
-		d = delta_2(a, b, c);
+		printRootEquationQuadRealDualComplex(d, f);
 	}
-	
-	printf("The two roots are %f +%fi and %f %fi\n", (-b+creal(d))/(2*a), cimag(d)/(2*a), (-b-creal(d))/(2*a), -cimag(d)/(2*a));
-	
-}
-
-int delta_0(void)
-{
 	return 0;
 }
 
-int delta_1(int a, int b, int c)
+void printRootEquationQuadRealSingle(double f)
 {
-	return sqrt(b*b-4*a*c);
+	printf("This equation has 1 real root.\n");
+	printf("x = %lf\n", f);
 }
 
-_Complex delta_2(int a, int b, int c)
+void printRootEquationQuadRealDualReal(double d, double f)
 {
-	return csqrt(b*b-4*a*c);
+	d = sqrt(d);
+
+	printf("This equation has 2 real roots.\n");
+	printf("x_1 = %lf\nx_2 = %lf\n", f+d, f-d);
+}
+
+void printRootEquationQuadRealDualComplex(double d, double f)
+{
+	d = sqrt(-d);
+	printf("This equation has 2 complex roots.\n");
+	printf("x_1 = %lf+%lfi\nx_2 = %lf-%lfi\n", f, d, f, d);
 }

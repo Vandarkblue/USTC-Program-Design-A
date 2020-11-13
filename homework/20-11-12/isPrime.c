@@ -25,7 +25,7 @@ int main(void)
 _Bool isPrime(size_t num)
 {
 	/* Small numbers claimed */
-	if (num == 1)
+	if (num <= 1)
 	{
 		printf("Are there any problems with your brain?\n");
 		return 0;
@@ -35,7 +35,7 @@ _Bool isPrime(size_t num)
 		return 1;
 	}
 	/* Considering a larger prime number can only be (6n+1) or (6n-1) */
-	if (num %2 == 0)
+	if (!(num & 1)) /* Bit operation for mod 2 */
 	{
 		printf("2 is a factor of %d.\n", num);
 		return 0;
