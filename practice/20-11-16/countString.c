@@ -3,7 +3,9 @@
 /*   Licensed under the MIT License     */
 /*  Copyright (c) 2020 Dec.Randomizer   */
 /* ------------------------------------ */
-/* We assum that the input text has been formatted. */
+/* We may assum that the input texts are formatted.
+* Due to personal habit, we choosae little camel-case function name.
+*/
 
 #include <stdio.h>
 

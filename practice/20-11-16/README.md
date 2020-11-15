@@ -18,3 +18,5 @@
 [**countString.c**](./countString.c)
 
 4. 用递归法编写函数将一个正整数转换为字符输出，例如输入整数 `2873` 存入一个整型变量，递归函数应按顺序输出字符 `2`、`8`、`7`、`3`，输入整数的位数不定，可以是变量允许范围内的任意正整数。
+
+[**intToCharRecursion.c**](./intToCharRecursion.c)

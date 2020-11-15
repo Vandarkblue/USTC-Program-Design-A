@@ -1,4 +1,4 @@
-/* isPrime.c -- Tan Haoqiang Page 166 Task 9 modified */
+/* scour.c -- Tan Haoqiang Page 166 Task 9 modified */
 /* ------------------------------------ */
 /*   Licensed under the MIT License     */
 /*  Copyright (c) 2020 Dec.Randomizer   */
@@ -9,18 +9,21 @@
 
 #define N 15
 
-/* Search for integer obj in array_a, and s is the length of a. */
+/* Search for int_obj in array_a, and int_s is the length of a[]. */
 int searchBinary(int a[], int s, int obj);
 int searchSequence(int a[], int s, int obj);
 
 int main(void)
 {
 	int a[N];
-	int obj, r;
+	int obj;
 
 	for (size_t i = 0; i < N; i++)
 	{
+		/* Sequenced array a[] can be randomly appointed, hereby lays an example. */
 		a[i] = 2*i +1;
+		// a[i] = i
+		// a[i] = i*i + 5*i + 2
 	}
 
 	printf("Input the integer to find:\n");
@@ -32,7 +35,8 @@ int main(void)
 	return 0;
 }
 
-int searchBinary(int a[], int s, int obj) /* Faster */
+/* Expected running faster */
+int searchBinary(int a[], int s, int obj)
 {
 	int boundUpper, boundLower, median;
 
@@ -61,6 +65,7 @@ int searchBinary(int a[], int s, int obj) /* Faster */
 	return -1;
 }
 
+/* Simpler formation */
 int searchSequence(int a[], int s, int obj)
 {
 	for (size_t i = 0; i < s; i++)
