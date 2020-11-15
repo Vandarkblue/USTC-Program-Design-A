@@ -27,8 +27,10 @@ int main(void)
 	printf("%6d spaces and\n", count(a, 0));
 	printf("%6d other characters.\n", count(a, -1));
 	
+	return 0;
 }
 
+/* From homework\20-11-05\strcat.c */
 char *strcat(char dest[], char addn[])
 {
 	size_t i = 1, j = 0, k = 0;
@@ -42,17 +44,17 @@ char *strcat(char dest[], char addn[])
 		dest[i+j] = addn[j];
 		++j;
 	}
-	return dest;
+	return dest; /* Consistent with string.h */
 }
 
 int count(char src[], int obj)
 {
+	/* i as cyclic variable, j as count variable */
 	int i = 0, j = 0;
-
 
 	switch (obj)
 	{
-	case 0:
+	case 0: /* space */
 		while (src[i] != '\0')
 		{
 			if (src[i] == ' ')
@@ -62,7 +64,7 @@ int count(char src[], int obj)
 			++i;
 		}
 		break;
-	case 1:
+	case 1: /* lowercase */
 		while (src[i] != '\0')
 		{
 			if (src[i] > 'a' && src[i] < 'z')
@@ -72,7 +74,7 @@ int count(char src[], int obj)
 			++i;
 		}
 		break;
-	case 2:
+	case 2: /* uppercase */
 		while (src[i] != '\0')
 		{
 			if (src[i] > 'A' && src[i] < 'Z')
@@ -82,7 +84,7 @@ int count(char src[], int obj)
 			++i;
 		}
 		break;
-	case 3:
+	case 3: /* number */
 		while (src[i] != '\0')
 		{
 			if (src[i] > '0' && src[i] < '9')
@@ -93,7 +95,7 @@ int count(char src[], int obj)
 		}
 		break;
 	case -1:
-	default:
+	default: /* other characters */
 		while (src[i] != '\0')
 		{
 			if (

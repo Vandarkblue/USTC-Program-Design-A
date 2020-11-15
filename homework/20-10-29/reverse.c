@@ -1,9 +1,5 @@
 /* reverse.c -- Tan Haoqiang page 109 task 9 modified */
 /* This program can process more than 5 digits. */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 
 #include <stdio.h>
 

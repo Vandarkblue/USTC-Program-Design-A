@@ -20,15 +20,21 @@ In this repository we aim to offer some certain help for program design in the C
 
 Any questions would be welcome since you have read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html).
 
-本仓库旨在为中国科学技术大学以及其它院校的同学提供计算机程序设计方面的一定参考，同时帮助仓库维护者养成良好的代码和文档写作习惯。仓库尽可能跟进教学进度更新，并做好相应的说明文档。
+本仓库旨在为中国科学技术大学以及其它院校的同学提供计算机程序设计方面的一定参考，同时帮助我们养成良好的代码和文档写作习惯。仓库尽可能跟进教学进度更新相关代码说明文档。
 
-仓库创建者接受关于本仓库的提问，但在向作者提问之前，请仔细阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)。
+我们接受关于本仓库的提问，但在向我们提问之前，请仔细阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)。
 
 ### Arrangement | 仓库结构
 
 In the `./homework/` and `./practice/` directories lay the code sorted accroding to the date when the contents are assigned.
 
 `./homework/` 目录是历次布置的作业，`./practice/` 目录则是每周一上机内容；下级目录按作业布置日期或上机日期命名。
+
+### Performance and Robustness | 性能与健壮性
+
+We would try our best to make all of the codes fast and robust, however, that is restricted to our limited knowledge in C Language. If an suggestions, please send us a [pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
+
+尽管编程水平有限，我们仍然尽力使所有的代码具有良好的性能和健壮性。如果对仓库中的代码有建议，请发送[pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
 
 ## Recommendations | 推荐
 
@@ -59,6 +65,6 @@ Who inspire me in a realistic way.
 
 ## Support us | 支持我们
 
-You may star this repository if it helped you.
+You may `star` this repository if it helped you.
 
-如果 USTC Program Design A 对你有所帮助，请给这个仓库点个 Star 吧。
+如果 USTC Program Design A 对你有所帮助，请给我们的仓库点个 Star。如果你期望看到作者的更多作品，可以关注 GitHub 账号 `Dec Randomizer`。

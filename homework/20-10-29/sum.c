@@ -1,8 +1,4 @@
 /* sum.c -- Tan Haoqiang page 137 task 5 */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 
 #include <stdio.h>
 
