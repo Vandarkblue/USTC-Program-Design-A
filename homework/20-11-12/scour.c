@@ -1,8 +1,4 @@
 /* scour.c -- Tan Haoqiang Page 166 Task 9 modified */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 /* Use two ways to find a number in a sequenced array. */
 
 #include <stdio.h>
@@ -20,7 +16,7 @@ int main(void)
 
 	for (size_t i = 0; i < N; i++)
 	{
-		/* Sequenced array a[] can be randomly appointed, hereby lays an example. */
+/* Sequenced array a[] can be randomly appointed, hereby lays an example. */
 		a[i] = 2*i +1;
 		// a[i] = i
 		// a[i] = i*i + 5*i + 2
@@ -59,9 +55,7 @@ int searchBinary(int a[], int s, int obj)
 		{
 			return median;
 		}
-
 	} // while
-
 	return -1;
 }
 
@@ -77,3 +71,4 @@ int searchSequence(int a[], int s, int obj)
 	}
 	return -1;
 }
+ 

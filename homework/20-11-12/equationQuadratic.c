@@ -1,14 +1,12 @@
 /* equationQuadratic.c -- Tan Haoqiang Page 215 Task 2 modified */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 /* Confusing task. Why do we need 3 functions?
 * Here only one with 3 arguments.
 */
 
 #include <stdio.h>
 #include <math.h>
+
+extern int scanf();
 
 void printRootEqationQuad(double, double, double);
 

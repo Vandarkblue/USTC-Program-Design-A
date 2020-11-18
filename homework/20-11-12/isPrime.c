@@ -1,8 +1,4 @@
 /* isPrime.c -- Tan Haoqiang Page 215 Task 3 */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 /* Examine a integer whether being prime. */
 
 #include <stdio.h>

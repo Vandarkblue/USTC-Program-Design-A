@@ -19,10 +19,10 @@ int main(void)
 		scanf("%d", &p[i]);
 	}
 
-	/* Bubble sort O(n^2) */
+/* Bubble sort O(n^2) */
 	for (size_t i = 0; i < n; i++)
 	{
-		for (size_t j = 0; j < n - i + 1; j++)
+		for (size_t j = 0; j < n - i - 1; j++)
 		{
 			if (p[j] > p[j+1])
 			{
@@ -41,11 +41,12 @@ int main(void)
 	}
 	putchar('\n');
 
-	/* Insert a integer */
+/* Insert a integer */
 	printf("The new integer is: ");
 	scanf("%d", &a);
 
-	/* Find the location where the integer should lie */
+/* Find the location where the integer should lie */
+	k = n;
 	for (size_t i = 0; i < n; i++) 
 	{
 		if (p[i] >= a)
@@ -53,13 +54,11 @@ int main(void)
 			k = i;
 			break;
 		}
-
 	}
 	for (size_t i = 0; i < k; i++)
 	{
 		q[i] = p[i];
 	}
-
 	q[k] = a;
 
 	for (size_t i = k; i < n; i++)

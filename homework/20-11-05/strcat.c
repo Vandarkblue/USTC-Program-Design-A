@@ -32,5 +32,6 @@ char *strcat(char dest[], char addn[])
 		dest[i+j] = addn[j];
 		++j;
 	}
+	dest[i+j] = '\0';
 	return dest;
 }

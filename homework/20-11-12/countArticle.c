@@ -1,32 +1,32 @@
 /* countArticle.c -- Tan Haoqiang Page 166 Task 10 */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 
-# include <stdio.h>
+#include <stdio.h>
 
 #define STR 80
 #define LINE 3
 
-char *strcat(char *, char *);
-int count(char src[], int obj);
+char *strcat(char*, char*);
+int *countArticle(char src[], int dest[]);
 
 int main(void)
 {
 	char s[STR], a[LINE*STR];
+	int count[5];
 	for (size_t i = 0; i < LINE; i++)
 	{
 		gets(s);
 		strcat(a, s);
 	}
-	printf("There are:\n");
-	printf("%6d uppercase letters,\n", count(a, 2));
-	printf("%6d lowercase letters,\n", count(a, 1));
-	printf("%6d digits,\n", count(a, 3));
-	printf("%6d spaces and\n", count(a, 0));
-	printf("%6d other characters.\n", count(a, -1));
 	
+	countArticle(a, count);
+
+	printf("There are:\n");
+	printf("%6d uppercase letters,\n", count[0]);
+	printf("%6d lowercase letters,\n", count[1]);
+	printf("%6d digits,\n", count[2]);
+	printf("%6d spaces and\n", count[3]);
+	printf("%6d other characters.\n", count[4]);
+
 	return 0;
 }
 
@@ -44,72 +44,39 @@ char *strcat(char dest[], char addn[])
 		dest[i+j] = addn[j];
 		++j;
 	}
-	return dest; /* Consistent with string.h */
+	/* Consistent with string.h */
+	return dest;
 }
 
-int count(char src[], int obj)
+/* The length of int_dest[] is at least 5 */
+int *countArticle(char src[], int dest[])
 {
-	/* i as cyclic variable, j as count variable */
-	int i = 0, j = 0;
+	/* i as cyclic variable */
+	int i = 0;
 
-	switch (obj)
+	while (src[i] != '\0')
 	{
-	case 0: /* space */
-		while (src[i] != '\0')
+		if (src[i] > 'A' && src[i] < 'Z')
 		{
-			if (src[i] == ' ')
-			{
-				++j;
-			}
-			++i;
+			++dest[0];
 		}
-		break;
-	case 1: /* lowercase */
-		while (src[i] != '\0')
+		else if (src[i] > 'a' && src[i] < 'z')
 		{
-			if (src[i] > 'a' && src[i] < 'z')
-			{
-				++j;
-			}
-			++i;
+			++dest[1];
 		}
-		break;
-	case 2: /* uppercase */
-		while (src[i] != '\0')
+		else if (src[i] > '0' && src[i] < '9')
 		{
-			if (src[i] > 'A' && src[i] < 'Z')
-			{
-				++j;
-			}
-			++i;
+			++dest[2];
 		}
-		break;
-	case 3: /* number */
-		while (src[i] != '\0')
+		else if (src[i] == ' ')
 		{
-			if (src[i] > '0' && src[i] < '9')
-			{
-				++j;
-			}
-			++i;
+			++dest[3];
 		}
-		break;
-	case -1:
-	default: /* other characters */
-		while (src[i] != '\0')
+		else
 		{
-			if (
-				src[i] != ' '
-				&& !(src[i] > 'a' && src[i] < 'z')
-				&& !(src[i] > 'A' && src[i] < 'Z')
-				&& !(src[i] > '0' && src[i] < '9')
-			)
-			{
-				++j;
-			}
-			++i;
+			++dest[4];
 		}
-		break;
+		++i;
 	}
-	return j;
+	return dest;
 }

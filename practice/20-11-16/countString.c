@@ -1,8 +1,4 @@
 /* countString.c -- Task 3 */
-/* ------------------------------------ */
-/*   Licensed under the MIT License     */
-/*  Copyright (c) 2020 Dec.Randomizer   */
-/* ------------------------------------ */
 /* We may assum that the input texts are formatted.
 * Due to personal habit, we choosae little camel-case function name.
 */
@@ -16,7 +12,7 @@ int countSpace(char*);
 
 int main(void)
 {
-	char str[LENGTH];
+	char str[LENGTH+1];
 	gets(str);
 
 	printf("%d, %d", countSpace(str), countWord(str));
