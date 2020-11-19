@@ -6,7 +6,7 @@
 #define LINE 3
 
 char *strcat(char*, char*);
-int *countArticle(char src[], int dest[]);
+int *countArticle(char*, int*);
 
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
 		gets(s);
 		strcat(a, s);
 	}
-	
+
 	countArticle(a, count);
 
 	printf("There are:\n");
