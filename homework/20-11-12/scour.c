@@ -6,8 +6,8 @@
 #define N 15
 
 /* Search for int_obj in array_a, and int_s is the length of a[]. */
-int searchBinary(int a[], int s, int obj);
-int searchSequence(int a[], int s, int obj);
+int searchBinary(int*, int, int);
+int searchSequence(int*, int, int);
 
 int main(void)
 {

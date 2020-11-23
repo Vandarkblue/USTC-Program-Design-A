@@ -32,9 +32,9 @@ In the `./homework/` and `./practice/` directories lay the code sorted accroding
 
 ### Performance and Robustness | 性能与健壮性
 
-We would try our best to make all of the codes fast and robust, however, that is restricted to our limited knowledge in C Language. If an suggestions, please send us a [pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
+We would try our best to make all of the codes fast and robust, however, that is restricted to our limited knowledge in C Language. If any suggestions, please send us a [pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
 
-尽管编程水平有限，我们仍然尽力使所有的代码具有良好的性能和健壮性。如果对仓库中的代码有建议，请发送[pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
+尽管编程水平有限，我们仍然尽力使所有的代码具有良好的性能和健壮性。如果对仓库中的代码有建议，请发送 [pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
 
 ## Recommendations | 推荐
 
@@ -57,11 +57,12 @@ Not only the softwares in our computers required to complie and run our C code, 
 Who inspire me in a realistic way.
 
 - *Goisury*
-- liu shao
-- *滫瑹莜蔦*
-- *迷人的牛老师*
-- [HaomingXU](https://github.com/HaomingXU)
-- [Sakura-522](https://github.com/Sakura-522)
+- *liu shao*
+- 大概是智
+- 迷人的牛老师
+- [*HaomingXU*](https://github.com/HaomingXU)
+- [*Sakura-522*](https://github.com/Sakura-522)
+- *YUKIKAZE*
 
 ## Support us | 支持我们
 
