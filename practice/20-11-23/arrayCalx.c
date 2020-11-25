@@ -1,3 +1,10 @@
+/* arrayCalx.c -- A simple array calculator */
+
+/* ------------------------------------ */
+/*   Licensed under the MIT License     */
+/*  Copyright (c) 2020 Dec.Randomizer   */
+/* ------------------------------------ */
+
 #include <stdio.h>
 
 #define SCALE 0xff
@@ -12,6 +19,7 @@ void arrayCalxSortSelect(int*, int);
 int arrayCalxFind(int*, int, int);
 _Bool arrayCalxDelete(int*, int*, int);
 _Bool arrayCalxIsSorted(int*, int);
+void arrayCalxLogo();
 
 int main(void)
 {
@@ -21,10 +29,7 @@ int main(void)
 	int key = -1;
 	int temp = 0; 
 
-	printf("  __   ____  ____   __   _  _  ___   __   __    _  _ \n");
-	printf(" / _\\ (  _ \\(  _ \\ / _\\ ( \\/ )/ __) / _\\ (  )  ( \\/ )\n");
-	printf("/    \\ )   / )   //    \\ )  /( (__ /    \\/ (_/\\ )  ( \n");
-	printf("\\_/\\_/(__\\_)(__\\_)\\_/\\_/(__/  \\___)\\_/\\_/\\____/(_/\\_)\n");
+	arrayCalxLogo();
 
 	while (1)
 	{
@@ -34,8 +39,8 @@ int main(void)
 		printf("2. Print the current array\n");
 		printf("3. Find the max. and the min. value\n");
 		printf("4. Find the average value\n");
-		printf("5. Bubble sorting\n");
-		printf("6. Select sorting\n");
+		printf("5. Bubble sort\n");
+		printf("6. Select sort\n");
 		printf("7. Find an element\n");
 		printf("8. Delete an element\n");
 		printf("9. Examine whether the array is sorted\n");
@@ -46,6 +51,8 @@ int main(void)
 			switch (key)
 			{
 			case 0:
+				printf("Exit\n");
+				arrayCalxLogo();
 				return 0;
 			case 1:
 				scale = arrayCalxInput(arr);
@@ -72,46 +79,60 @@ int main(void)
 				printf("Avr = %f\n", arrayCalxAverage(arr, scale));
 				break;
 			case 5:
+				printf("Bubble sort\n");
 				arrayCalxSortBubble(arr, scale);
 				break;
 			case 6:
+				printf("Select sort\n");
 				arrayCalxSortSelect(arr, scale);
 				break;
 			case 7:
-			find:
-				printf("Input the integer to find: ");
-				if (scanf("%d", &key))
+				while (1)
 				{
-					temp = arrayCalxFind(arr, scale, key);
-
-					if (temp == -1)
+					printf("Input the integer to find: ");
+					if (scanf("%d", &key))
 					{
-						printf("Not found.\n");
+						temp = arrayCalxFind(arr, scale, key);
+
+						if (temp == -1)
+						{
+							printf("Not found.\n");
+						}
+						else
+						{
+							printf("Integer %d is arr[%d]\n", key, temp);
+						}
+						break;
 					}
 					else
 					{
-						printf("Integer %d is arr[%d]\n", key, temp);
-					}
+						fflush(stdin);
+					}	
 				}
-				else goto find;
 				break;
 			case 8:
-			del:
-				printf("Input the integer to delete: ");
-				if (scanf("%d", &key))
+				while (1)
 				{
-					temp = (int)arrayCalxDelete(arr, &scale, key);
-
-					if (temp)
+					printf("Input the integer to delete: ");
+					if (scanf("%d", &key))
 					{
-						printf("Not found.\n");
+						temp = (int)arrayCalxDelete(arr, &scale, key);
+
+						if (temp)
+						{
+							printf("Not found.\n");
+						}
+						else
+						{
+							printf("Integer %d has been removed\n", key);
+						}
+						break;
 					}
 					else
 					{
-						printf("Integer %d has been removed\n", key);
+						fflush(stdin);
 					}
 				}
-				else goto del;
 				break;
 			case 9:
 				temp = (int)arrayCalxIsSorted(arr, scale);
@@ -127,12 +148,16 @@ int main(void)
 				}
 				break;
 			default:
+				printf("Function not defined\n");
 				break;
-
 			} // switch(key)
 		} // if input correct
+		else
+		{
+			printf("Menu accepts integers only\n");
+			fflush(stdin);
+		}
 	} // while true
-
 	return 0;
 }
 
@@ -271,10 +296,6 @@ void arrayCalxSortSelect(int arr[], int scale)
 /* Return the subscript of the object element, -1 for not found */
 int arrayCalxFind(int arr[], int scale, int obj)
 {
-	if (scale == 0)
-	{
-		return -1;
-	}
 	for (size_t i = 0; i < scale; i++)
 	{
 		if (arr[i] == obj)
@@ -317,4 +338,13 @@ _Bool arrayCalxIsSorted(int arr[], int scale)
 		}
 	}
 	return 1;
+}
+
+void arrayCalxLogo(void)
+{
+	printf("  __   ____  ____   __   _  _  ___   __   __    _  _ \n");
+	printf(" / _\\ (  _ \\(  _ \\ / _\\ ( \\/ )/ __) / _\\ (  )  ( \\/ )\n");
+	printf("/    \\ )   / )   //    \\ )  /( (__ /    \\/ (_/\\ )  ( \n");
+	printf("\\_/\\_/(__\\_)(__\\_)\\_/\\_/(__/  \\___)\\_/\\_/\\____/(_/\\_)\n");
+	return;
 }
