@@ -1,24 +1,38 @@
 #include <stdio.h>
 
+/* the number of students */
+#define N 5
+/* the number of subjects */
+#define M 3
+
 int main(void)
 {
-	int n[5], a[5], b[5], c[5];
+	int id[N];
+
+	double grade[N][M], average[N];
 	
-	float avr[5];
-	
-	for (size_t i = 0; i < 5; i++)
+	for (int i = 0; i < N; i++)
 	{
 		printf("Please input the serial number of Student %d: ", i+1);
-		scanf("%d", &n[i]);
-		printf("Please input the three scores of Student %d, separated by space.\n", i+1);
-		scanf("%d %d %d", &a[i], &b[i], &c[i]);
+		scanf("%d", &id[i]);
+		printf("Please input the %d scores of Student %d, separated by space.\n", M, i+1);
+		for (int j = 0; j < M; j++)
+		{
+			scanf("%lf", &grade[i][j]);
+			average[i] += grade[i][j];
+		}
 		
-		avr[i] = (a[i] + b[i] + c[i]) / 3.0;
+		average[i] /= (double)M;
 	}
 
-	for (size_t i = 0; i < 5; i++)
+	for (int i = 0; i < N; i++)
 	{
-		printf("The serial number of Student %d is %d, the scores are %d.00 %d.00 %d.00, the average score is %2.2f\n", i+1, n[i], a[i], b[i], c[i], avr[i]);
+		printf("The serial number of Student %d is %8.2lf; the scores are ", i+1, id[i]);
+		for (int j = 0; j < M; j++)
+		{
+			printf("%8.2lf, ", grade[i][j]);
+		}
+		printf("and the average score is %8.2f;\n", average[i]);
 	}
 
 	return 0;

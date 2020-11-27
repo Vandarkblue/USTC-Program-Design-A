@@ -4,7 +4,7 @@
 
 #define LENGTH 0xfffffff
 
-char *strcat(char *, char *);
+char *udf_strcat(char *, char *);
 
 int main(void)
 {
@@ -20,7 +20,8 @@ int main(void)
 	return 0;
 }
 
-char *strcat(char dest[], char addn[])
+/* udf as user-defined function, avoiding possible conflicts */
+char *udf_strcat(char dest[], char addn[])
 {
 	size_t i = 1, j = 0, k = 0;
 	while (dest[i] != '\0')

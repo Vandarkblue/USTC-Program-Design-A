@@ -5,36 +5,38 @@
 
 int main(void)
 {
-	size_t a;
+	int num, t;
 
-	size_t n = 0, i = 0;
+	int n = 0, i = 0;
 
 	printf("a = ");
-	scanf("%lld", &a);
+	scanf("%d", &num);
+	t = num;
 
-	for (size_t t = a; t >= 1; t /= 10)
+	while (t > 0)
 	{
+		t /= 10;
 		n++;
 	}
-	printf("The length is %lld.\n", n);
+	printf("The length is %d.\n", n);
 
-	size_t c[n-1]; // Variable-length array
-	
-	for (size_t t = a; i < n; t /= 10)
+	int c[n]; // Variable-length array
+
+	for (int i = 0; i < n; i++)
 	{
-		c[i] = t%10;
-		i++;
+		c[i] = num % 10;
+		num /= 10;
 	}
 
 	/* Ascending */
-	for (size_t i = 0; i < n; i++)
+	for (int i = n-1; i >= 0; i--)
 	{
-		printf("%d, ", c[n-i-1]);
+		printf("%d, ", c[i]);
 	}
 	putchar('\n');
 
 	/* Descending */
-	for (size_t i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		printf("%d, ", c[i]);
 	}
