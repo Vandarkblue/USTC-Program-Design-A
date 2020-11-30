@@ -51,18 +51,15 @@ int main(void)
 			switch (key)
 			{
 			case 0:
-				printf("Exit\n");
 				arrayCalxLogo();
 				return 0;
 			case 1:
 				scale = arrayCalxInput(arr);
 				break;
 			case 2:
-				printf("--------------------------------------\n");
 				arrayCalxPrint(arr, scale);
 				break;
 			case 3:
-				printf("--------------------------------------\n");
 				if (!scale)
 				{
 					printf("NULL\n");
@@ -158,7 +155,7 @@ int main(void)
 			fflush(stdin);
 		}
 	} // while true
-	return 0;
+	return -1;
 }
 
 /* input an integer each line, EOF for end, return the actual scale of array */
@@ -167,7 +164,7 @@ int arrayCalxInput(int arr[])
 	int i = 0;
 	int input = 0;
 
-	printf("Input in sequence, ctrl+z for end\n");
+	printf("Input in sequence, Ctrl+Z for end\n");
 	printf("--------------------------------------\n");
 	for (i = 0; i < SCALE; ++i)
 	{
@@ -190,7 +187,7 @@ void arrayCalxPrint(int arr[], int scale)
 {
 	if (scale == 0)
 	{
-		printf("NUll");
+		printf("NULL\n");
 	}
 	for (int i = 0; i < scale; i++)
 	{

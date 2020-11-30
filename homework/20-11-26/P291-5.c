@@ -4,7 +4,6 @@ int main(void)
 {
 	int n, m, count, remained;
 
-
 	/* kill one each m */
 	printf("Input n: ");
 	scanf("%d", &n);
@@ -43,7 +42,7 @@ int main(void)
 			
 		} // for each killed or alive
 		
-	} // while more than 1 remain
+	} // while more than 1 remained
 
 	/* find the last one */
 	count = 0;
