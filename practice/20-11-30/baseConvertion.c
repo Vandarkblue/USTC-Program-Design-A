@@ -1,88 +1,45 @@
 #include <stdio.h>
+#include <math.h>
 
-void baseConvertDecBin(int);
-void baseConvertDecOct(int);
-void baseConvertDecHex(int);
+void baseConvert(int, int);
 
 int main(void)
 {
 	int num;
 	int command;
+
 	scanf("%d", &num);
 	scanf("%d", &command);
-	switch (command)
-	{
-	case 2:
-		baseConvertDecBin(num);
-		break;
-	case 8:
-		baseConvertDecOct(num);
-		break;
-	case 16:
-		baseConvertDecHex(num);
-		break;
-	default:
-		break;
-	}
+
+	baseConvert(num, command);
+
 	return 0;
 }
 
-void baseConvertDecBin(int dec)
+void baseConvert(int dec, int base)
 {
-	char digits[] = {"01"};
+	char digits[] = {"0123456789abcdefghijklmnopqrstuvwxyz"};
+	if (base > 36)
+	{
+		return;
+	}
 	if (dec < 0)
 	{
 		putchar('-');
-		baseConvertDecBin(-dec);
+		baseConvert(-dec, base);
 	}
 	else if (dec == 0)
 	{
 		return;
 	}
-	else
+	else if (dec < base)
 	{
-		baseConvertDecBin(dec/2);
-		printf("%c", digits[dec%2]);
-	}
-	return;
-}
-
-void baseConvertDecOct(int dec)
-{
-	char digits[] = {"01234567"};
-	if (dec < 0)
-	{
-		putchar('-');
-		baseConvertDecOct(-dec);
-	}
-	else if (dec == 0)
-	{
-		return;
+		printf("%c", digits[dec % base]);
 	}
 	else
 	{
-		baseConvertDecOct(dec/8);
-		printf("%c", digits[dec%8]);
-	}
-	return;
-}
-
-void baseConvertDecHex(int dec)
-{
-	char digits[] = {"0123456789abcdef"};
-	if (dec < 0)
-	{
-		putchar('-');
-		baseConvertDecHex(-dec);
-	}
-	else if (dec == 0)
-	{
-		return;
-	}
-	else
-	{
-		baseConvertDecHex(dec/16);
-		printf("%c", digits[dec%16]);
+		baseConvert(dec / base, base);
+		printf("%c", digits[dec % base]);
 	}
 	return;
 }

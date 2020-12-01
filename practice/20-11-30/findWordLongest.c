@@ -20,7 +20,7 @@ int main(void)
 	{
 		for (int j = 0; j < lengthWord; j++)
 		{
-			putchar(*(dest[i]+j));
+			putchar(*(dest[i]+j*sizeof(char)));
 		}
 		putchar(' ');
 	}
