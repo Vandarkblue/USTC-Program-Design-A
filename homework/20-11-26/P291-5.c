@@ -1,14 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void)
+int main(int argc, char *argv[])
 {
 	int n, m, count, remained;
 
+	if (argc != 3)
+	{
+		printf("Two integer arguments needed.\n");
+		return -1;
+	}
+
+	n = atoi(argv[1]);
+	m = atoi(argv[2]);
+
 	/* kill one each m */
-	printf("Input n: ");
-	scanf("%d", &n);
-	printf("Input m: ");
-	scanf("%d", &m);
+	// printf("Input n: ");
+	// scanf("%d", &n);
+	// printf("Input m: ");
+	// scanf("%d", &m);
+
 	remained = n;
 
 	_Bool flag[n];
