@@ -18,23 +18,17 @@ All of the codes and other associated documentation files in this repository are
 
 In this repository we aim to offer some certain help for program design in the C language. It also works as a reminder of the proper method for code and documentation. We would try our best to push the required materials one day before the deadline and clarify the documentation.
 
-Any questions would be welcome since you have read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html).
+Feel free to discuss all about it at [Discussions](https://github.com/Vandarkblue/USTC-Program-Design-A/discussions). Any questions would be welcome since you have read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html).
 
 本仓库旨在为中国科学技术大学以及其它院校的同学提供计算机程序设计方面的一定参考，同时帮助我们养成良好的代码和文档写作习惯。仓库尽可能跟进教学进度更新相关代码说明文档。
 
-我们接受关于本仓库的提问，但在向我们提问之前，请仔细阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)。
+如果你有 GitHub 账号，可以在本仓库的[讨论板块](https://github.com/Vandarkblue/USTC-Program-Design-A/discussions)发言。我们接受关于程序设计的提问，但在向我们提问之前，请仔细阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)。
 
 ### Arrangement | 仓库结构
 
 In the `./homework/` and `./practice/` directories lay the code sorted accroding to the date when the contents are assigned.
 
 `./homework/` 目录是历次布置的作业，`./practice/` 目录则是每周一上机内容；下级目录按作业布置日期或上机日期命名。
-
-### Performance and Robustness | 性能与健壮性
-
-We would try our best to make all of the codes fast and robust, however, that is restricted to our limited knowledge in C Language. If any suggestions, please send us a [pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
-
-尽管编程水平有限，我们仍然尽力使所有的代码具有良好的性能和健壮性。如果对仓库中的代码有建议，请发送 [pull request](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls).
 
 ## Recommendations | 推荐
 
@@ -66,6 +60,4 @@ Who inspire me in a realistic way.
 
 ## Support us | 支持我们
 
-You may `star` this repository if it helped you.
-
-如果 USTC Program Design A 对你有所帮助，请给我们的仓库点个 Star。如果你期望看到作者的更多作品，可以关注 GitHub 账号 `Dec Randomizer`。
+All of the [pull requests](https://github.com/Vandarkblue/USTC-Program-Design-A/pulls) would be welcomed. You may *star* this repository if it helped you.
