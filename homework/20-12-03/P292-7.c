@@ -18,13 +18,14 @@ int strCpyPart(char dest[], char src[], int omitted)
 	{
 		*dest++ = *src++;
 	}
+	*dest = '\0';
 	return 0;
 }
 
 int main(void)
 {
 	char a[] = "Deep Dark Fantasy.";
-	char b[sizeof(a)/sizeof(a[0])];
+	char b[sizeof(a)/sizeof(a[0])] = "\0";
 
 	strCpyPart(b, a, 5);
 	puts(b);

@@ -8,7 +8,7 @@ int main(void)
     char *name[]={"Follow me", "BASIC", "Great Wall", "FORTRAN", "Computer"};
     int n = sizeof(name) / sizeof(name[0]);
 
-    strSortSelect(n, name);
+    strSortBubble(n, name);
     strPrintf(n, name);
 
 	return 0;

@@ -3,17 +3,18 @@
 #define COLUMN 3
 #define ROW 2
 
-int *transpose(const int column, const int row, int dest[column][row], const int src[row][column])
+int *transpose(const int column, const int row, int (*dest)[row], int (*src)[column])
 {
 	for (int i = 0; i < column; i++)
 	{
 		for (int j = 0; j < row; j++)
 		{
-			dest[i][j] = src[j][i];
+			// dest[i][j] = src[j][i];
+			*(*(dest+i)+j) = *(*(src+j)+i);
 		}
 		
 	}
-	return &dest[0][0];
+	return *dest;
 }
 
 int main(void)

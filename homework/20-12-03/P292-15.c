@@ -11,7 +11,7 @@ int avrCourse(int, int, int(*)[*], int);
 /* Return the scale of dest[], i.e. the count of failed students. Failed as numFail courses failed. */
 int stuFail(int, int, int(*)[*], int, int*);
 /* Return 1 if average >= 90 or lowest >= 85 in student[], otherwise 0. */
-_Bool avr90orAll85(int, int*);
+bool avr90orAll85(int, int*);
 
 int main(void)
 {
@@ -35,14 +35,21 @@ int main(void)
 	// }
 
 	printf("---\n");
-	printf("avr = %d\n", avrCourse(STUDENTC, COURSEC, arr, COURSES));
+	printf("avr = %4d\n", avrCourse(STUDENTC, COURSEC, arr, COURSES));
 	printf("---\nFailed: ");
 
 	numFail = stuFail(STUDENTC, COURSEC, arr, NUMFAIL, failed);
 
 	for (int i = 0; i < numFail; i++)
 	{
-		printf("%d ", failed[i]);
+		// printf("%4d", failed[i]);
+		for (int j = 0; j < COURSEC; j++)
+		{
+			printf("%4d", arr[failed[i]][j]);
+
+		} // for each course
+
+		putchar('\n');
 
 	} // for each failed student
 
@@ -105,9 +112,9 @@ int stuFail(int studentC, int courseC, int arr[studentC][courseC], int numFail, 
 	return stuFailed;
 }
 
-_Bool avr90orAll85(int courseC, int student[courseC])
+bool avr90orAll85(int courseC, int student[courseC])
 {
-	_Bool flag85 = true;
+	bool flag85 = true;
 	int sum = 0;
 
 	for (int i = 0; i < courseC; i++)

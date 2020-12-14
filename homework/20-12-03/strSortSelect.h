@@ -25,3 +25,23 @@ void strSortSelect(int strc, char *strv[])
 	}
 	return;
 }
+
+void strSortBubble(int strc, char *strv[])
+{
+	char *pointer = NULL;
+	for (int i = 0; i < strc - 1; i++)
+	{
+		for (int j = 0; j < strc - i - 1; j++)
+		{
+			if (strcmp(strv[j], strv[j+1]) > 0)
+			{
+				pointer = strv[j];
+				strv[j] = strv[j+1];
+				strv[j+1] = pointer;
+			}
+			
+		}
+		
+	}
+	
+}
