@@ -1,9 +1,8 @@
-#include <stdio.h>
+#include "../../library/arrarCalx.h"
 
 #define N 10
 
 void crossSort(int**, int*);
-void sortBubble(int*[], int);
 
 int main(void)
 {
@@ -44,8 +43,8 @@ void crossSort(int *dest[N], int srcv[N])
 		
 	}
 
-	sortBubble(oddv, oddc);
-	sortBubble(evenv, evenc);
+	arrayCalxSortBubbleP(oddv, oddc);
+	arrayCalxSortBubbleP(evenv, evenc);
 
 	for (int i = 0; i < oddc; i++)
 	{
@@ -60,23 +59,5 @@ void crossSort(int *dest[N], int srcv[N])
 		printf("%d ", *dest[i]);
 	}
 	
-	return;
-}
-
-void sortBubble(int *arr[], int scale)
-{
-	int *temp;
-	for (int i = 0; i < scale - 1; i++)
-	{
-		for (int j = 0; j < scale - i - 1; j++)
-		{
-			if (*(arr[j]) > *(arr[j+1]))
-			{
-				temp = arr[j];
-				arr[j] = arr[j+1];
-				arr[j+1] = temp;
-			}
-		}
-	}
 	return;
 }

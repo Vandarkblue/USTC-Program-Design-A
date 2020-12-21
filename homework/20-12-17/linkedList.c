@@ -1,8 +1,15 @@
+/* linkedList.c -- A simple linked list calculator */
+
+/* ------------------------------------ */
+/*   Licensed under the MIT License     */
+/*  Copyright (c) 2020 Dec.Randomizer   */
+/* ------------------------------------ */
+
 #include <stdlib.h>
 #include <stdbool.h>
 #include "../../library/s_gets.h"
 
-#define NLEN 0x40
+#define NLEN 0x10
 
 struct Student
 {

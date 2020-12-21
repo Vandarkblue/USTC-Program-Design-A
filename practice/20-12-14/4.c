@@ -1,13 +1,10 @@
-#include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
-
-const char digits[] = {"0123456789abcdefghijklmnopqrstuvwxyz"};
+#include "../../library/baseConvert.h"
 
 int baseInput(int, char []);
 bool legality(int, char []);
 int valueDigit(char);
-void baseConvert(int, int);
 
 int main(void)
 {
@@ -72,31 +69,4 @@ int valueDigit(char a)
 		
 	}
 	return -1;
-}
-
-void baseConvert(int dec, int base)
-{
-	if (base > 36)
-	{
-		return;
-	}
-	if (dec < 0)
-	{
-		putchar('-');
-		baseConvert(-dec, base);
-	}
-	else if (dec == 0)
-	{
-		return;
-	}
-	else if (dec < base)
-	{
-		printf("%c", digits[dec % base]);
-	}
-	else
-	{
-		baseConvert(dec / base, base);
-		printf("%c", digits[dec % base]);
-	}
-	return;
 }
