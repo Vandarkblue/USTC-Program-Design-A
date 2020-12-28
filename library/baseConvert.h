@@ -1,3 +1,6 @@
+#ifndef _BASE_CONVERT_H_
+#define _BASE_CONVERT_H_
+
 #include <stdio.h>
 
 const char digits[] = {"0123456789abcdefghijklmnopqrstuvwxyz"};
@@ -8,7 +11,7 @@ void baseConvert(int dec, int base)
 	{
 		return;
 	}
-	if (dec < 0)
+	else if (dec < 0)
 	{
 		putchar('-');
 		baseConvert(-dec, base);
@@ -28,3 +31,5 @@ void baseConvert(int dec, int base)
 	}
 	return;
 }
+
+#endif

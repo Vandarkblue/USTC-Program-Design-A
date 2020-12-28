@@ -11,7 +11,9 @@
 
 #define NLEN 0x10
 
-struct Student
+#define _ERR_MALLOC "Cannot put new students.\n"
+
+typedef struct Student
 {
 	int num;
 	char name[NLEN];
@@ -22,22 +24,22 @@ struct Student
 	int height;
 	/* (next == NULL) == the last */
 	struct Student *next;
-};
+}Student;
 
 /* insert one student in the front, return head pointer */
-struct Student *insertHeadNew(struct Student *);
+Student *insertHeadNew(Student *);
 /* insert one student in the back, return head pointer */
-void insertTailNew(struct Student *);
+void insertTailNew(Student *);
 /* Input one student, return NULL for fail */
-struct Student *stuNew(void);
+Student *stuNew(void);
 /* Print all of the students */
-void stuPrint(struct Student *);
+void stuPrint(Student *);
 /* num as the student number, name[] as the name of *object */
 void inputInteger(int, int *, char []);
 
 int main(void)
 {
-	struct Student *student = stuNew();
+	Student *student = stuNew();
 	stuPrint(student);
 	student = insertHeadNew(student);
 	insertTailNew(student);
@@ -45,18 +47,22 @@ int main(void)
 	return 0;
 }
 
-struct Student *insertHeadNew(struct Student *head)
+Student *insertHeadNew(Student *head)
 {
-	struct Student *node = stuNew();
+	Student *node = stuNew();
+	if (node == NULL)
+	{
+		return head;
+	}
 	node->next = head;
 	return node;
 }
 
-void insertTailNew(struct Student *tail)
+void insertTailNew(Student *tail)
 {
 	if (tail->next == NULL)
 	{
-		struct Student *node = stuNew();
+		Student *node = stuNew();
 		tail->next = node;
 		return;
 	}
@@ -64,11 +70,12 @@ void insertTailNew(struct Student *tail)
 	return;
 }
 
-struct Student *stuNew(void)
+Student *stuNew(void)
 {
-	struct Student *student = (struct Student *)malloc(sizeof(struct Student));
+	Student *student = (Student *)malloc(sizeof(Student));
 	if (student == NULL)
 	{
+		fprintf(stderr, _ERR_MALLOC);
 		return NULL;
 	}
 	char gender;
@@ -113,7 +120,7 @@ struct Student *stuNew(void)
 	return student;
 }
 
-void stuPrint(struct Student *student)
+void stuPrint(Student *student)
 {
 	printf("---------");
 	if (student == NULL)

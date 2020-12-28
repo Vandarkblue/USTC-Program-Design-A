@@ -1,5 +1,8 @@
-#include <stdio.h>
+#ifndef _ARRAY_CALX_H_
+#define _ARRAY_CALX_H_
+
 #include <stdbool.h>
+#include <stdio.h>
 
 /* input an integer each line, EOF for end, return the actual scale of array */
 int arrayCalxInput(int *arr, int scale)
@@ -15,7 +18,7 @@ int arrayCalxInput(int *arr, int scale)
 		input = scanf("%d", arr);
 		if (input == EOF)
 		{
-		printf("--------------------------------------\n");
+			printf("--------------------------------------\n");
 			return i;
 		}
 		if (!input)
@@ -225,3 +228,5 @@ bool arrayCalxIsSorted(int arr[], int scale)
 	}
 	return true;
 }
+
+#endif /* _ARRAY_CALX_H_ */

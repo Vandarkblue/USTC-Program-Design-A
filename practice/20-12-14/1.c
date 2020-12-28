@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "../../library/arrarCalx.h"
+#include "../../library/arrayCalx.h"
 
 int main(void)
 {

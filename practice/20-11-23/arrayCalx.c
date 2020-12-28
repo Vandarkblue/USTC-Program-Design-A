@@ -5,7 +5,7 @@
 /*  Copyright (c) 2020 Dec.Randomizer   */
 /* ------------------------------------ */
 
-#include "../../library/arrarCalx.h"
+#include "../../library/arrayCalx.h"
 
 #define SCALE 0xff
 
